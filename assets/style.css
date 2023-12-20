@@ -1,0 +1,2695 @@
+/*____________________________________________________________
+
+# @import
+	## @import _variables.scss
+# Mixins
+	## Line Info Mixin
+	## Project Image Path Mixin
+	## Title Underline Width
+# Fonts
+# Container
+	## Portfolio Card Content
+	## Portfolio Card Wrap
+	## Popup Menu
+		### Portfolio Container
+			#### Presentation
+				##### Present Page
+					###### Present Side
+					###### Present Main
+						####### Present Main Title Wrap
+						####### Present Main Content
+				##### Detail Page
+					###### Line Info Wrap
+					###### Detail Wrap
+						####### Detail Item
+					##### Portfolio Page
+						###### Portfolio Info Wrap
+							####### Portfolio Links
+						###### Portfolio Content
+# @media
+	## @media 1680px
+	## @media 1680px
+	## @media 1440px
+	## @media 1280px
+	## @media 1024px
+	## @media 960px
+	## @media 848px
+	## @media 768px
+	## @media 642px
+	## @media 576px
+	## @media 414px
+	## @media 375px
+	## @media 320px
+	## @media iPad (min-width: 767px) and (max-width: 1025px) (portrait)
+
+____________________________________________________________*/
+/*____________________________________________________________
+# @import
+____________________________________________________________*/
+/*____________________________________________________________
+## @import _variables.scss
+____________________________________________________________*/
+/*____________________________________________________________
+## Regular color variables
+____________________________________________________________*/
+/*____________________________________________________________
+## Compound color variables
+____________________________________________________________*/
+/*____________________________________________________________
+## @import _centering.scss
+____________________________________________________________*/
+@import 'https://rawcdn.githack.com/Kerthin/links/e23c46b4fa25b5672245c51fca29213232d5e883/css/fontLinks.css';
+.presentMain__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.portfolioContent, .portfolioInfoWrap, .lineInfoWrap, .closeButtonWrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.detailsWrap, .presentMain__content, .presentMain__titleWrap, .closeButtonWrap__circle, .presentation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*____________________________________________________________
+# Mixins
+____________________________________________________________*/
+/*____________________________________________________________
+## Line Info Mixin
+____________________________________________________________*/
+/*____________________________________________________________
+## Project Image Path Mixin
+____________________________________________________________*/
+/*____________________________________________________________
+## Title Underline Width
+____________________________________________________________*/
+/*____________________________________________________________
+# Fonts
+____________________________________________________________*/
+/*____________________________________________________________
+# @import
+____________________________________________________________*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*____________________________________________________________
+# Auxiliary styles
+____________________________________________________________*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*____________________________________________________________
+# Container
+____________________________________________________________*/
+.containerbox {
+  /* position: absolute; */
+  width: 100%;
+  background-color: #fcfcfc;
+}
+
+/*____________________________________________________________
+## Portfolio Card Content
+____________________________________________________________*/
+.portfolioCard a {
+  text-decoration: none;
+}
+
+.portfolioCardContent {
+  position: relative;
+  margin: 0px auto 100px;
+  padding-top: 70px ;
+  width: 1500px;
+}
+
+.portfolioCardContent__title {
+  position: relative;
+  float: left;
+  width: 45%;
+  font-family: Galeria;
+  font-size: 100px;
+  color: #040404;
+}
+
+.portfolioCardContent__paragraphWrap {
+  position: relative;
+  float: left;
+  width: 55%;
+}
+
+.portfolioCardContent__paragraphTitle {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: Galeria;
+  font-size: 24px;
+  color: #000000;
+}
+
+.portfolioCardContent__paragraph {
+  font-family: Galeria-Medium;
+  font-size: 18px;
+  word-spacing: 8px;
+  text-align: justify;
+  line-height: 35px;
+  color: #1a1a1a;
+}
+
+/*____________________________________________________________
+## Portfolio Card Wrap
+____________________________________________________________*/
+.portfolioCardWrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1500px;
+  padding-bottom: 50px;
+}
+.portfolioCardWrap.portfolioCardWrap_eventsNone {
+  pointer-events: none;
+}
+
+.portfolioCard {
+  position: relative;
+  float: left;
+  margin-right: 60px;
+
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.portfolioCard:nth-child(4n) {
+  margin-right: 0;
+}
+.portfolioCard:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+.portfolioCard:active {
+  transform: scale(1) translateZ(0);
+}
+
+.instagram-icon {
+  color: #000000;
+}
+
+.portfolioCard__img {
+  position: relative;
+  width: 330px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.portfolioCard__img_gwent {
+  background-image: url("https://i.pinimg.com/originals/73/8d/26/738d26a92f816d7379f67519ee5e8210.png");
+}
+.portfolioCard__img_prado {
+  background-image: url("https://i.pinimg.com/originals/9d/c8/f7/9dc8f7657f620fe5496d10cf9f55ac83.png");
+}
+.portfolioCard__img_spiele {
+  background-image: url("https://i.pinimg.com/originals/f4/47/d2/f447d2fd4073f28997ca80bdf0cd6cf9.png");
+}
+.portfolioCard__img_cuphead {
+  background-image: url("https://i.pinimg.com/originals/ed/3d/4e/ed3d4e76fa5d5116de0a2bb8f649689a.png");
+}
+.portfolioCard__img_calculator {
+  background-image: url("https://i.pinimg.com/originals/a9/5b/95/a95b9595b3a101d14407c92c3586bed4.png");
+}
+.portfolioCard__img_player {
+  background-image: url("https://i.pinimg.com/originals/e0/8a/14/e08a141b68c02b08358d7aec2ce6c97c.png");
+}
+.portfolioCard__img_mobile {
+  background-image: url("https://i.pinimg.com/originals/b8/72/89/b8728959adfe9cdeb6ed7e255e6f1162.png");
+}
+.portfolioCard__img_artGallery {
+  background-image: url("https://i.pinimg.com/originals/a2/22/42/a222421ec14add5fd262768d76bdf183.png");
+}
+.portfolioCard__img_tree {
+  background-image: url("https://i.pinimg.com/originals/4b/ca/fc/4bcafca6b36076f715a7e1817108ea41.png");
+}
+
+.portfolioCard__about {
+  width: 100%;
+  margin-top: 26px;
+}
+
+.portfolioCard__name {
+  margin-bottom: 4px;
+  font-family: Galeria;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #292c2c;
+}
+
+.portfolioCard__technologies {
+  font-family: Galeria-Medium;
+  font-size: 14px;
+  
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #292c2c;
+}
+
+/*____________________________________________________________
+## Popup Menu
+____________________________________________________________*/
+.blockRevealer__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 50;
+}
+
+.popupMenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.js-popupMenu_open {
+  pointer-events: visible;
+}
+.js-popupMenu_open .presentation {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+/*____________________________________________________________
+### Portfolio Container
+____________________________________________________________*/
+.portfolioContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2eaf1;
+}
+
+.bgRect {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid #292c2c;
+}
+.bgRect:nth-child(1) {
+  top: 2.5%;
+  right: 30%;
+  background-color: #56c299;
+}
+.bgRect:nth-child(2) {
+  bottom: 2.5%;
+  left: 20%;
+  background-color: #dd4f5b;
+}
+
+/*____________________________________________________________
+#### Presentation
+____________________________________________________________*/
+.presentation {
+  width: 90%;
+  height: 90%;
+  background-color: #facf6f;
+  border: 2px solid #292c2c;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.presentation.presentation_open {
+  width: 100%;
+  height: 100vh;
+  border-width: 0;
+  overflow: scroll;
+  cursor: default;
+}
+.presentation.presentation_open .presentSide {
+  height: 100%;
+  transition-delay: 0.3s;
+}
+.presentation.presentation_open .closeButtonWrap {
+  transform: translateX(-50%) scale(1);
+  transition-delay: 0.8s;
+}
+.presentation.presentation_open .presentMain {
+  width: calc(100% - 160px);
+}
+.presentation.presentation_open .presentMain__slide {
+  width: 100%;
+}
+.presentation.presentation_open .presentMain__titleCircle {
+  transform: scale(0);
+}
+.presentation.presentation_open .presentMain__content {
+  height: 60%;
+  transition-delay: 1s;
+}
+
+.presentation_gwent .presentMain__titleUnderline {
+  width: 80px;
+}
+.presentation_gwent .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/41/40/36/414036a6800072b6fea0b0550809b3be.png");
+}
+.presentation_gwent .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/fb/47/65/fb4765686b6711724f6f8765659b15e5.png");
+}
+.presentation_gwent .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/76/56/2b/76562b163d1947cc40366c973b9d390d.png");
+}
+.presentation_gwent .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/9c/25/18/9c2518687686dc8dadf136ffa8e7bca6.png");
+}
+.presentation_gwent .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/a5/4a/5b/a54a5beb991dc900743cf95339ac69ab.png");
+}
+.presentation_gwent .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/6d/ba/33/6dba33b2c8b6a9a812d1ea7ef78456fb.png");
+}
+.presentation_gwent .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/23/aa/45/23aa45cad67cb76587550c5812e0828f.png");
+}
+
+.presentation_prado .presentMain__titleUnderline {
+  width: 53px;
+}
+.presentation_prado .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/da/d2/be/dad2bec273660ef57d1b5b8226cdd9fa.png");
+}
+.presentation_prado .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/ff/5a/75/ff5a75072701ac21e976857f4a8e4cc8.png");
+}
+.presentation_prado .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/f3/9c/1f/f39c1ffd297b392afdce9f1c38ff44b1.png");
+}
+.presentation_prado .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/1a/e0/f7/1ae0f7edfe962e0ab3cc1ccfbad381c0.png");
+}
+.presentation_prado .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/c0/52/04/c052041d1ff7f0392d189038b919ff03.png");
+}
+.presentation_prado .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/b7/3d/e0/b73de097933f05ba0a51dbc129b8ec61.png");
+}
+.presentation_prado .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/c0/49/eb/c049eb8e05385fae7a136042505f53e0.png");
+}
+
+.presentation_spiele .presentMain__titleUnderline {
+  width: 65px;
+}
+.presentation_spiele .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/57/1f/d4/571fd4a327d7b1bc1df135d8392ed26f.png");
+}
+.presentation_spiele .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/c8/7e/8a/c87e8a698ae1b4835464f2304945f84a.png");
+}
+.presentation_spiele .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/32/0b/31/320b31ee5d039a9e335b9b5be2a1000e.png");
+}
+.presentation_spiele .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/de/19/0c/de190c623f727f13114e3139ad503eda.png");
+}
+.presentation_spiele .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/a4/3a/97/a43a9788ff5635ab2559a5281e49ccf9.png");
+}
+.presentation_spiele .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/5e/74/82/5e7482f21acbfd060991b44b0946a924.png");
+}
+.presentation_spiele .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/c5/de/0c/c5de0cc134bfba07aff16db8ae06b666.png");
+}
+
+.presentation_cuphead .presentMain__titleUnderline {
+  width: 80px;
+}
+.presentation_cuphead .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/6b/30/63/6b30634127df5e8d6d16cad9700005ef.png");
+}
+.presentation_cuphead .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/60/ec/d0/60ecd07e17fe41fa5061357e49dd0385.png");
+}
+.presentation_cuphead .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/67/28/7c/67287c239b575f00c16e294744fce485.png");
+}
+.presentation_cuphead .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/6c/a5/77/6ca5777dc71025f9b10cf1959de9c34c.png");
+}
+.presentation_cuphead .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/8d/58/1b/8d581b8b1f9181abe117396950cb6f63.png");
+}
+.presentation_cuphead .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/53/a2/da/53a2da0fd9ee24b2eaf131ce487a5d97.png");
+}
+.presentation_cuphead .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/52/4f/81/524f813c10e1814fcb711fef0828d7ed.png");
+}
+
+.presentation_calculator .presentMain__titleUnderline {
+  width: 80px;
+}
+.presentation_calculator .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/42/f0/0e/42f00e9e1e79731cbfc9881b5c6f68f6.png");
+}
+.presentation_calculator .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/71/7c/eb/717ceb296abb30870c8f38ac648588bf.png");
+}
+.presentation_calculator .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/ff/3a/f4/ff3af41a3813c3c3e28129759d76eaad.png");
+}
+.presentation_calculator .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/d3/8e/51/d38e51c24708241a4cdee1bed0d5db2a.png");
+}
+.presentation_calculator .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/99/9a/1e/999a1e847137e6df114b2223067a0b87.png");
+}
+.presentation_calculator .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/6e/c3/58/6ec3588c53470444bc530bc3d2466289.png");
+}
+.presentation_calculator .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/97/94/93/979493204b4eafb00d89e05390f11268.png");
+}
+
+.presentation_player .presentMain__titleUnderline {
+  width: 103px;
+}
+.presentation_player .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/46/f8/7f/46f87ffbbce0ab98e516b0b2989ac15d.png");
+}
+.presentation_player .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/cf/10/38/cf1038119e3275ab196569df9824c33b.png");
+}
+.presentation_player .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/af/ef/11/afef114b4e7dc09f369e78d9abcb4f31.png");
+}
+.presentation_player .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/b8/9d/ee/b89dee9a722a725612fcb40be44ecec9.png");
+}
+.presentation_player .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/9f/db/86/9fdb86d5d5b4b6dc622372ad2f0c3b29.png");
+}
+.presentation_player .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/2b/0e/87/2b0e87f37d613fee6851152fdf6bb514.png");
+}
+.presentation_player .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/6c/06/f1/6c06f15e586aa7625fa0537b38cbc897.png");
+}
+
+.presentation_old .presentMain__titleUnderline {
+  width: 78px;
+}
+.presentation_old .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/1f/81/ff/1f81ff1c40a8d2c201b97c253cfdec91.png");
+}
+.presentation_old .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/4f/57/eb/4f57ebcd0d6117a448132dd8620702bb.png");
+}
+.presentation_old .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/29/a3/2f/29a32f0f19b038c329fbd742fb9a6f28.png");
+}
+.presentation_old .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/91/db/ee/91dbee03e20c27ceff2e876adbb37cbb.png");
+}
+.presentation_old .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/b5/e8/19/b5e819a1366e66159e4205e8229aa16e.png");
+}
+.presentation_old .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/04/fe/09/04fe09a2205d68898db1df988f75095c.png");
+}
+.presentation_old .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/02/dc/9d/02dc9d25ad5c33bd66fdd77653e53e83.png");
+}
+
+.presentation_art .presentMain__titleUnderline {
+  width: 62px;
+}
+.presentation_art .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/8f/5a/ca/8f5acab6c267d16b500d18cb0b6ce6c7.png");
+}
+.presentation_art .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/18/97/f6/1897f6f2792fa98f09f3c69c889b9e92.png");
+}
+.presentation_art .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/f9/ea/42/f9ea42013fda6c830f15acd00d821e85.png");
+}
+.presentation_art .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/b3/9a/4c/b39a4ce8dc576d74d3638ff9d5e0ec05.png");
+}
+.presentation_art .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/10/bb/ad/10bbad5a586a87ef44cc7571c60a3454.png");
+}
+.presentation_art .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/bd/02/43/bd0243482cf76c8f0e4820771646fbe8.png");
+}
+.presentation_art .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/37/ed/55/37ed55ddd8bc610582dde587ccc1adea.png");
+}
+
+.presentation_trees .presentMain__titleUnderline {
+  width: 80px;
+}
+.presentation_trees .presentMain__img {
+  background-image: url("https://i.pinimg.com/originals/27/ce/b6/27ceb6ef4f7bcd5c24ad0a88ea307336.png");
+}
+.presentation_trees .detailItem:nth-child(1) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/c9/ce/0c/c9ce0c11fd9f1dc98f80e27824878985.png");
+}
+.presentation_trees .detailItem:nth-child(2) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/04/d6/f4/04d6f4a420c59b366b11f827c0c617f9.png");
+}
+.presentation_trees .detailItem:nth-child(3) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/e1/e1/2b/e1e12b9054b7cf3e2b2b6eac21de092d.png");
+}
+.presentation_trees .detailItem:nth-child(4) .detailItem__img {
+  background-image: url("https://i.pinimg.com/originals/0c/82/7c/0c827cae63b464cc499a9955d9bb1604.png");
+}
+.presentation_trees .portfolioImg_lg {
+  background-image: url("https://i.pinimg.com/originals/c3/85/43/c3854332e59bd3c3aa5ea0b86c68fc95.png");
+}
+.presentation_trees .portfolioImg_md {
+  background-image: url("https://i.pinimg.com/originals/9f/78/73/9f787305e7292ceb815d1956d97f5fe2.png");
+}
+
+/*____________________________________________________________
+##### Present Page
+____________________________________________________________*/
+.presentPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #facf6f;
+}
+
+/*____________________________________________________________
+###### Present Side
+____________________________________________________________*/
+.presentSide {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  height: 0;
+  border-right: 2px solid #292c2c;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.closeButtonWrap {
+  top: 30px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #292c2c;
+  border-radius: 50%;
+  background-color: #f2eaf1;
+  transform: scale(0);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.closeButtonWrap__textWrap,
+.presentMain__textWrap {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  animation-name: circleTextRotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes circleTextRotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.closeButtonWrap__text {
+  font-family: Galeria;
+  font-size: 30px;
+  fill: #292c2c;
+}
+
+.closeButtonWrap__circle {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #292c2c;
+  border-radius: 50%;
+  background-color: #facf6f;
+}
+
+.presentSide__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(-1, -1);
+  font-family: Galeria;
+  font-size: 72px;
+  color: #292c2c;
+  writing-mode: vertical-lr;
+}
+
+/*____________________________________________________________
+###### Present Main
+____________________________________________________________*/
+.presentMain {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  transition-delay: 0.2s;
+}
+
+.presentMain__article {
+  position: absolute;
+  font-family: Galeria;
+  font-size: 22px;
+  color: #292c2c;
+}
+.presentMain__article .presentMain__demoLink {
+  color: #292c2c;
+}
+.presentMain__article:nth-child(1) {
+  top: 35px;
+  left: 40px;
+}
+.presentMain__article:nth-child(2) {
+  top: 35px;
+  right: 40px;
+  font-size: 36px;
+}
+.presentMain__article:nth-child(3) {
+  bottom: 35px;
+  left: 40px;
+}
+.presentMain__article:nth-child(4) {
+  bottom: 35px;
+  right: 40px;
+}
+
+/*____________________________________________________________
+####### Present Main Title Wrap
+____________________________________________________________*/
+.presentMain__title {
+  position: relative;
+  font-family: Galeria;
+  font-size: 96px;
+  color: #292c2c;
+}
+
+.presentMain__titleUnderline {
+  position: absolute;
+  bottom: -8px;
+  height: 5px;
+  background-color: #292c2c;
+}
+
+.presentMain__slide {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: calc(100% + 15px);
+  background-color: #facf6f;
+  transition: all 0.4s;
+  transition-delay: 0.7s;
+}
+
+.presentMain__titleCircle {
+  position: absolute;
+  top: -80px;
+  right: -125px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.4s;
+  transition-delay: 0.7s;
+}
+.presentMain__titleCircle .presentMain__text {
+  font-family: Galeria;
+  font-size: 22px;
+  fill: #292c2c;
+}
+
+/*____________________________________________________________
+####### Present Main Content
+____________________________________________________________*/
+.presentMain__content {
+  width: 80%;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.presentMain__descript {
+  float: left;
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.presentMain__descriptTitle {
+  margin: 10% 0;
+  font-family: Galeria;
+  font-size: 24px;
+  text-transform: capitalize;
+  line-height: 35px;
+  color: #292c2c;
+}
+
+.presentMain__descriptParagraph {
+  font-family: Galeria-Medium;
+  font-size: 18px;
+  word-spacing: 20px;
+  text-align: justify;
+  line-height: 50px;
+  color: #292c2c;
+}
+
+.presentMain__imgWrap {
+  position: relative;
+  float: left;
+  width: 65%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.presentMain__imgRect {
+  position: absolute;
+  right: 15%;
+  width: 40%;
+  height: 30%;
+  border: 2px solid #292c2c;
+  background-color: #56c299;
+}
+
+.presentMain__img {
+  right: 5%;
+  width: 80%;
+  height: 80%;
+  border: 20px solid #fff;
+  outline: 2px solid #292c2c;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*____________________________________________________________
+##### Detail Page
+____________________________________________________________*/
+.detailPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #facf6f;
+}
+
+.detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+  width: calc(100% - 184px);
+}
+.detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+  width: calc(100% - 447px);
+}
+
+/*____________________________________________________________
+###### Line Info Wrap
+____________________________________________________________*/
+.lineInfoWrap {
+  width: 90%;
+}
+.lineInfoWrap:nth-child(1) {
+  top: 5%;
+}
+.lineInfoWrap:nth-child(2) {
+  bottom: 5%;
+}
+
+.lineInfoWrap__left,
+.lineInfoWrap__right {
+  float: left;
+  font-family: Galeria;
+  font-size: 22px;
+  color: #292c2c;
+}
+.lineInfoWrap__left a,
+.lineInfoWrap__right a {
+  color: #292c2c;
+}
+
+.lineInfoWrap__left {
+  margin-right: 30px;
+}
+
+.lineInfoWrap__line {
+  float: left;
+  margin-top: 14px;
+  margin-right: 30px;
+  height: 2px;
+  background-color: #292c2c;
+}
+
+/*____________________________________________________________
+###### Detail Wrap
+____________________________________________________________*/
+.detailsWrap {
+  width: 90vw;
+  height: 70vh;
+}
+
+/*____________________________________________________________
+####### Detail Item
+____________________________________________________________*/
+.detailItem {
+  position: relative;
+  float: left;
+  margin-bottom: 5vh;
+  margin-right: 5vw;
+  width: 42.5vw;
+  height: 32.5vh;
+}
+.detailItem:nth-child(2n) {
+  margin-right: 0;
+}
+.detailItem:nth-child(1) .detailItem__img {
+  border-color: #facf6f;
+}
+.detailItem:nth-child(2) .detailItem__img {
+  border-color: #dd4f5b;
+}
+.detailItem:nth-child(3) .detailItem__img {
+  border-color: #56c299;
+}
+.detailItem:nth-child(4) .detailItem__img {
+  border-color: #fff;
+}
+
+.detailItem__img {
+  float: left;
+  margin-right: 5%;
+  width: 45%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 12px solid;
+  outline: 2px solid #292c2c;
+}
+
+.detailItem__info {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.detailItem__titleWrap {
+  position: absolute;
+  width: 100%;
+}
+
+.detailItem__title,
+.detailItem__subtitle {
+  font-size: 22px;
+  color: #292c2c;
+}
+
+.detailItem__title {
+  margin-bottom: 10px;
+  font-family: Galeria;
+}
+
+.detailItem__subtitle {
+  font-family: Galeria-Medium;
+}
+
+.detailItem__paragraph {
+  position: absolute;
+  bottom: 3%;
+  font-family: Galeria-Medium;
+  font-size: 16px;
+  word-spacing: 10px;
+  text-align: justify;
+  line-height: 40px;
+  color: #292c2c;
+}
+
+/*____________________________________________________________
+##### Portfolio Page
+____________________________________________________________*/
+.portfolioPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #facf6f;
+}
+
+.portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+  width: calc(100% - 210px);
+}
+.portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+  width: calc(100% - 408px);
+}
+
+/*____________________________________________________________
+###### Portfolio Info Wrap
+____________________________________________________________*/
+.portfolioInfoWrap {
+  top: 15%;
+  width: 90%;
+  height: 40%;
+}
+
+/*____________________________________________________________
+####### Portfolio Links
+____________________________________________________________*/
+.portfolioImg,
+.portfolioLinks {
+  position: relative;
+  float: left;
+  height: 100%;
+  border: 20px solid;
+  outline: 2px solid #292c2c;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolioImg_lg {
+  margin-right: 2.5%;
+  width: 45%;
+  border-color: #fff;
+}
+
+.portfolioImg_md {
+  width: 30%;
+  border-color: #56c299;
+}
+
+.portfolioLinks {
+  margin-right: 2.5%;
+  width: 20%;
+  border-color: #dd4f5b;
+  background-color: #dd4f5b;
+}
+
+.portfolioLinks__lineWrap {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.portfolioLinks__line {
+  float: left;
+  margin-top: 23px;
+  margin-right: 20px;
+  width: calc(100% - 70px);
+  height: 3px;
+  background-color: #292c2c;
+}
+
+.portfolioLinks__circle {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #292c2c;
+  border-radius: 50%;
+  background-color: #facf6f;
+}
+
+.portfolioLinks__socialWrap {
+  width: 100%;
+}
+
+.portfolioLinks__socialTitle {
+  margin-bottom: 20px;
+  font-family: Galeria;
+  font-size: 32px;
+  color: #fff;
+}
+
+.portfolioLinks__socialList {
+  width: 100%;
+  list-style: none;
+}
+
+.portfolioLinks__socialItem {
+  position: relative;
+  margin-bottom: 20px;
+  width: 115px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+.portfolioLinks__socialItem:hover {
+  transform: translateY(-3px);
+}
+.portfolioLinks__socialItem:hover .portfolioLinks__icon {
+  stroke: #7dcbd8;
+}
+.portfolioLinks__socialItem:hover .portfolioLinks__name {
+  color: #7dcbd8;
+}
+
+.portfolioLinks__link {
+  text-decoration: none;
+}
+
+.portfolioLinks__icon {
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #fff;
+}
+
+.portfolioLinks__name {
+  position: absolute;
+  font-family: Galeria-Medium;
+  font-size: 14px;
+  color: #fff;
+}
+
+.portfolioLinks__underline {
+  position: absolute;
+  bottom: 23px;
+  width: 30%;
+  height: 3px;
+  background-color: #fff;
+}
+
+/*____________________________________________________________
+###### Portfolio Content
+____________________________________________________________*/
+.portfolioContent {
+  bottom: 15%;
+  width: 90%;
+}
+
+.portfolioTitle {
+  position: relative;
+  font-family: Galeria;
+  font-size: 96px;
+  color: #292c2c;
+}
+
+.portfolio__paragraphWrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.portfolio__paragraph {
+  font-family: Galeria-Medium;
+  font-size: 16px;
+  word-spacing: 10px;
+  text-align: justify;
+  line-height: 40px;
+  color: #292c2c;
+}
+
+/*____________________________________________________________
+# @media
+____________________________________________________________*/
+/*____________________________________________________________
+## @media 1680px
+____________________________________________________________*/
+@media only screen and (max-width: 1680px) {
+  .presentMain__descriptParagraph {
+    font-size: 20px;
+    word-spacing: 15px;
+    line-height: 40px;
+  }
+
+  .detailItem__paragraph {
+    word-spacing: 7px;
+    line-height: 35px;
+  }
+
+  .portfolioLinks__socialTitle {
+    margin-bottom: 18px;
+    font-size: 26px;
+  }
+}
+/*____________________________________________________________
+## @media 1680px
+____________________________________________________________*/
+@media only screen and (max-width: 1600px) {
+  .portfolioCardContent {
+    margin: 110px auto 75px;
+    width: 1110px;
+  }
+
+  .portfolioCardContent__title {
+    font-size: 75px;
+  }
+
+  .portfolioCardContent__paragraphTitle {
+    margin-bottom: 15px;
+    font-size: 21px;
+  }
+
+  .portfolioCardContent__paragraph {
+    font-size: 15px;
+    word-spacing: 8px;
+    line-height: 30px;
+  }
+
+  .portfolioCardWrap {
+    width: 1110px;
+  }
+
+  .portfolioCard:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolioCard:nth-child(4n) {
+    margin-right: 60px;
+  }
+
+  .presentMain__descriptParagraph {
+    word-spacing: 12px;
+    line-height: 35px;
+  }
+
+  .detailItem__paragraph {
+    word-spacing: 6px;
+    line-height: 30px;
+  }
+}
+/*____________________________________________________________
+## @media 1440px
+____________________________________________________________*/
+@media only screen and (max-width: 1440px) {
+  .presentation.presentation_open .presentMain {
+    width: calc(100% - 140px);
+  }
+
+  .presentSide {
+    width: 140px;
+  }
+
+  .presentSide__title {
+    font-size: 56px;
+  }
+
+  .presentMain__article {
+    font-size: 18px;
+  }
+  .presentMain__article:nth-child(2) {
+    font-size: 28px;
+  }
+
+  .presentMain__descriptParagraph {
+    font-size: 16px;
+    word-spacing: 10px;
+    line-height: 30px;
+  }
+
+  .detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 162px);
+  }
+  .detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 376px);
+  }
+
+  .lineInfoWrap__left,
+.lineInfoWrap__right {
+    font-size: 18px;
+  }
+
+  .lineInfoWrap__line {
+    margin-top: 10px;
+  }
+
+  .detailItem__paragraph {
+    font-size: 14px;
+    word-spacing: 5px;
+    line-height: 25px;
+  }
+
+  .portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 183px);
+  }
+  .portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 345px);
+  }
+
+  .portfolioLinks__lineWrap {
+    margin-bottom: 8px;
+    height: 40px;
+  }
+
+  .portfolioLinks__line {
+    margin-top: 18.5px;
+    margin-right: 15px;
+    width: calc(100% - 55px);
+  }
+
+  .portfolioLinks__circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .portfolioLinks__socialTitle {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .portfolioLinks__socialItem {
+    margin-bottom: 15px;
+    height: 15px;
+  }
+
+  .portfolioLinks__icon {
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .portfolioLinks__name {
+    font-size: 12px;
+  }
+
+  .portfolioLinks__underline {
+    bottom: 0;
+  }
+}
+/*____________________________________________________________
+## @media 1280px
+____________________________________________________________*/
+@media only screen and (max-width: 1280px) {
+  .portfolioCardContent {
+    margin: 90px auto 60px;
+    width: 888px;
+  }
+
+  .portfolioCardContent__title {
+    width: 100%;
+    font-size: 100px;
+  }
+
+  .portfolioCardContent__paragraphWrap {
+    display: none;
+  }
+
+  .portfolioCardWrap {
+    width: 888px;
+  }
+
+  .portfolioCard {
+    margin-right: 48px;
+  }
+  .portfolioCard:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolioCard:nth-child(4n) {
+    margin-right: 48px;
+  }
+  
+  .portfolioCard__about {
+    margin-top: 20px;
+  }
+  
+  .portfolioCard__name {
+    font-size: 21px;
+    width: 264px;
+  }
+
+  .portfolioCard__img {
+    width: 264px;
+    height: 389px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 13px;
+  }
+
+  .closeButtonWrap {
+    top: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .closeButtonWrap__text {
+    font-size: 28px;
+  }
+
+  .closeButtonWrap__circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .presentMain__title {
+    font-size: 86px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 70px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 48px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 55px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 65px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 65px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 92px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 70px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 55px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 72px;
+  }
+
+  .presentMain__titleCircle {
+    top: -60px;
+    right: -110px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .presentMain__descriptParagraph {
+    word-spacing: 5px;
+    line-height: 25px;
+  }
+
+  .detailItem__paragraph {
+    word-spacing: 3px;
+    line-height: 20px;
+  }
+
+  .portfolioTitle {
+    font-size: 86px;
+  }
+
+  .portfolio__paragraph {
+    word-spacing: 8px;
+    line-height: 30px;
+  }
+}
+/*____________________________________________________________
+## @media 1024px
+____________________________________________________________*/
+@media only screen and (max-width: 1024px) {
+  .presentMain__descript {
+    width: 100%;
+    height: 10%;
+  }
+
+  .presentMain__descriptTitle {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .presentMain__descriptParagraph {
+    display: none;
+  }
+
+  .presentMain__imgWrap {
+    width: 100%;
+    height: 90%;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 18px;
+  }
+
+  .portfolioTitle {
+    font-size: 72px;
+  }
+
+  .portfolio__paragraph {
+    font-size: 14px;
+    word-spacing: 3px;
+    line-height: 30px;
+  }
+}
+/*____________________________________________________________
+## @media 960px
+____________________________________________________________*/
+@media only screen and (max-width: 960px) {
+  .portfolioCardContent {
+    margin: 70px auto 45px;
+    width: 666px;
+  }
+
+  .portfolioCardContent__title {
+    font-size: 75px;
+  }
+
+  .portfolioCardWrap {
+    width: 666px;
+  }
+
+  .portfolioCard {
+    /* padding: 15px;
+    margin-bottom: 36px; */
+    margin-right: 36px;
+  }
+  .portfolioCard:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolioCard:nth-child(4n) {
+    margin-right: 36px;
+  }
+  
+  .portfolioCard__img {
+    width: 198px;
+    height: 279px;
+  }
+
+  .portfolioCard__about {
+    margin-top: 15px;
+  }
+
+  .portfolioCard__name {
+    font-size: 15px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 10px;
+  }
+
+  .portfolioInfoWrap {
+    height: 70%;
+  }
+
+  .portfolioImg,
+.portfolioLinks {
+    width: 100%;
+    border: 15px solid;
+  }
+
+  .portfolioImg_lg {
+    display: none;
+  }
+
+  .portfolioImg_md {
+    height: 40%;
+    border-color: #56c299;
+  }
+
+  .portfolioLinks {
+    margin-bottom: 2.5%;
+    height: 57.5%;
+    border-color: #dd4f5b;
+  }
+
+  .portfolioLinks__lineWrap {
+    margin-bottom: 8px;
+    height: 30px;
+  }
+
+  .portfolioLinks__line {
+    margin-top: 13.5px;
+    margin-right: 12px;
+    width: calc(100% - 42px);
+  }
+
+  .portfolioLinks__circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .portfolioLinks__socialTitle {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .portfolioLinks__underline {
+    display: none;
+  }
+
+  .portfolioContent {
+    display: none;
+  }
+}
+/*____________________________________________________________
+## @media 848px
+____________________________________________________________*/
+@media only screen and (max-width: 848px) {
+  .presentation.presentation_open .presentMain {
+    width: calc(100% - 110px);
+  }
+
+  .presentSide {
+    width: 110px;
+  }
+
+  .closeButtonWrap {
+    top: 40px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .closeButtonWrap__text {
+    font-size: 30px;
+  }
+
+  .closeButtonWrap__circle {
+    width: 21px;
+    height: 21px;
+  }
+
+  .presentSide__title {
+    font-size: 48px;
+  }
+
+  .presentMain__article {
+    font-size: 16px;
+  }
+  .presentMain__article:nth-child(2) {
+    font-size: 24px;
+  }
+
+  .presentMain__title {
+    font-size: 72px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 60px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 47px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 57px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 57px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 78px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 60px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 46px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 60px;
+  }
+
+  .presentMain__titleCircle {
+    top: -40px;
+    right: -80px;
+    width: 100px;
+    height: 100px;
+  }
+  .presentMain__titleCircle .presentMain__text {
+    font-size: 18px;
+  }
+
+  .detailItem__img {
+    width: 55%;
+    border: 8px solid;
+  }
+
+  .detailItem__info {
+    width: 40%;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 16px;
+  }
+
+  .detailItem__paragraph {
+    display: none;
+  }
+}
+/*____________________________________________________________
+## @media 768px
+____________________________________________________________*/
+@media only screen and (max-width: 768px) {
+  .portfolioCardContent {
+    width: 576px;
+  }
+
+  .portfolioCardWrap {
+    width: 576px;
+  }
+
+  .portfolioCard {
+    /* padding: 20px;
+    margin-bottom: 48px; */
+    margin-right: 48px;
+  }
+  .portfolioCard:nth-child(3n) {
+    margin-right: 48px;
+  }
+  .portfolioCard:nth-child(2n) {
+    margin-right: 0;
+  }
+  
+  .portfolioCard__img {
+    width: 264px;
+    height: 369px;
+  }
+
+  .portfolioCard__about {
+    margin-top: 20px;
+  }
+
+  .portfolioCard__name {
+    font-size: 21px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 13px;
+  }
+
+  .presentation.presentation_open .presentSide {
+    width: 100%;
+    height: 80px;
+    transition-delay: 0.3s;
+  }
+  .presentation.presentation_open .closeButtonWrap {
+    transform: translateY(-50%) scale(1);
+  }
+  .presentation.presentation_open .presentMain {
+    width: 100%;
+    height: calc(100% - 80px);
+  }
+
+  .presentSide {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 80px;
+    border-right: 0;
+    border-bottom: 2px solid #292c2c;
+  }
+
+  .closeButtonWrap {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+  }
+
+  .closeButtonWrap__circle {
+    width: 16px;
+    height: 16px;
+  }
+
+  .presentSide__title {
+    font-size: 36px;
+    transform: translate(-50%, -50%) scale(1, 1);
+    writing-mode: lr-tb;
+  }
+
+  .presentMain {
+    bottom: 0;
+  }
+
+  .presentMain__article {
+    font-size: 18px;
+  }
+  .presentMain__article:nth-child(2) {
+    font-size: 22px;
+  }
+
+  .presentMain__title {
+    font-size: 64px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 52px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 35px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 42px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 50px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 50px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 69px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 52px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 53px;
+  }
+
+  .presentMain__titleCircle {
+    top: -40px;
+    right: -80px;
+    width: 90px;
+    height: 90px;
+  }
+  .presentMain__titleCircle .presentMain__text {
+    font-size: 20px;
+  }
+
+  .presentMain__descript {
+    display: none;
+  }
+
+  .presentMain__descriptTitle {
+    display: none;
+  }
+
+  .presentMain__imgWrap {
+    height: 100%;
+  }
+
+  .presentMain__img {
+    width: 90%;
+  }
+
+  .detailItem {
+    margin-bottom: 2vh;
+    margin-right: 0;
+    width: 100%;
+    height: 16vh;
+  }
+
+  .detailItem__img {
+    margin-right: 5%;
+    width: 35%;
+    border: 10px solid;
+  }
+
+  .detailItem__info {
+    width: 60%;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 24px;
+  }
+
+  .detailItem__title {
+    margin-bottom: 8px;
+  }
+
+  .detailItem__paragraph {
+    font-size: 16px;
+    word-spacing: 10px;
+    line-height: 40px;
+  }
+}
+/*____________________________________________________________
+## @media 642px
+____________________________________________________________*/
+@media only screen and (max-width: 642px) {
+  .portfolioCardContent {
+    width: 330px;
+  }
+
+  .portfolioCardContent__title {
+    font-size: 60px;
+  }
+
+  .portfolioCardWrap {
+    width: 330px;
+  }
+
+  .portfolioCard {
+    /* padding: 25px; */
+    margin-right: 0;
+  }
+  .portfolioCard:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  .portfolioCard__img {
+    width: 330px;
+    height: 450px;
+  }
+
+  .portfolioCard__about {
+    margin-top: 25px;
+  }
+
+  .portfolioCard__name {
+    font-size: 26px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 16px;
+  }
+
+  .presentMain__article {
+    font-size: 14px;
+  }
+
+  .detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 120px);
+  }
+  .detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 286px);
+  }
+
+  .lineInfoWrap__left,
+.lineInfoWrap__right {
+    font-size: 14px;
+  }
+
+  .lineInfoWrap__left {
+    margin-right: 20px;
+  }
+
+  .lineInfoWrap__line {
+    margin-top: 7px;
+    margin-right: 20px;
+  }
+
+  .portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 136px);
+  }
+  .portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 262px);
+  }
+}
+/*____________________________________________________________
+## @media 576px
+____________________________________________________________*/
+@media only screen and (max-width: 576px) {
+  .presentMain__article {
+    font-size: 12px;
+  }
+  .presentMain__article:nth-child(1) {
+    top: 25px;
+    left: 25px;
+  }
+  .presentMain__article:nth-child(2) {
+    top: 25px;
+    right: 25px;
+    font-size: 16px;
+  }
+  .presentMain__article:nth-child(3) {
+    bottom: 25px;
+    left: 25px;
+  }
+  .presentMain__article:nth-child(4) {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .presentMain__title {
+    font-size: 48px;
+  }
+
+  .presentMain__titleUnderline {
+    bottom: -5px;
+    height: 4px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 26px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 38px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 38px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 51px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentMain__titleCircle {
+    top: -35px;
+    right: -60px;
+    width: 70px;
+    height: 70px;
+  }
+  .presentMain__titleCircle .presentMain__text {
+    font-size: 24px;
+  }
+
+  .presentMain__img {
+    border-width: 15px;
+  }
+
+  .detailItem__img {
+    border: 8px solid;
+  }
+
+  .portfolioImg,
+.portfolioLinks {
+    border: 15px solid;
+  }
+
+  .portfolioImg_lg {
+    border-color: #fff;
+  }
+
+  .portfolioImg_md {
+    border-color: #56c299;
+  }
+
+  .portfolioLinks {
+    border-color: #dd4f5b;
+  }
+
+  .detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 108px);
+  }
+  .detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 252px);
+  }
+
+  .lineInfoWrap__left,
+.lineInfoWrap__right {
+    font-size: 12px;
+  }
+
+  .lineInfoWrap__line {
+    margin-top: 6px;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 20px;
+  }
+
+  .portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 122px);
+  }
+  .portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 230px);
+  }
+}
+/*____________________________________________________________
+## @media 414px
+____________________________________________________________*/
+@media only screen and (max-width: 414px) {
+  .portfolioCardContent {
+    margin: 45px auto 30px;
+    width: 264px;
+  }
+
+  .portfolioCardContent__title {
+    font-size: 45px;
+  }
+
+  .portfolioCardWrap {
+    width: 264px;
+  }
+
+  .portfolioCard {
+    /* padding: 20px;
+    margin-bottom: 34px; */
+  }
+  
+  .portfolioCard__img {
+    width: 264px;
+    height: 369px;
+  }
+
+  .portfolioCard__about {
+    margin-top: 20px;
+  }
+
+  .portfolioCard__name {
+    font-size: 22px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 13px;
+  }
+
+  .presentation.presentation_open .presentMain__content {
+    height: 80%;
+  }
+
+  .presentSide__title {
+    font-size: 28px;
+  }
+
+  .presentMain__title {
+    font-size: 36px;
+  }
+
+  .presentMain__titleUnderline {
+    bottom: -3px;
+    height: 3px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 21px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 24px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 40px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentMain__titleCircle {
+    top: -30px;
+    right: -50px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 18px;
+  }
+}
+/*____________________________________________________________
+## @media 375px
+____________________________________________________________*/
+@media only screen and (max-width: 375px) {
+  .presentation.presentation_open .presentSide {
+    height: 70px;
+  }
+  .presentation.presentation_open .presentMain {
+    height: calc(100% - 70px);
+  }
+
+  .presentSide__title {
+    font-size: 24px;
+  }
+
+  .closeButtonWrap {
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .closeButtonWrap__text {
+    font-size: 32px;
+  }
+
+  .closeButtonWrap__circle {
+    width: 15px;
+    height: 15px;
+  }
+
+  .presentMain__img {
+    border-width: 10px;
+  }
+
+  .detailItem__img {
+    border: 6px solid;
+  }
+
+  .portfolioImg,
+.portfolioLinks {
+    border: 10px solid;
+  }
+
+  .portfolioImg_lg {
+    border-color: #fff;
+  }
+
+  .portfolioImg_md {
+    border-color: #56c299;
+  }
+
+  .portfolioLinks {
+    border-color: #dd4f5b;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 14px;
+  }
+}
+/*____________________________________________________________
+## @media 320px
+____________________________________________________________*/
+@media only screen and (max-width: 320px) {
+  .portfolioCardContent {
+    margin: 35px auto 24px;
+    width: 198px;
+  }
+
+  .portfolioCardContent__title {
+    font-size: 35px;
+  }
+
+  .portfolioCardWrap {
+    width: 198px;
+  }
+
+  .portfolioCard {
+    /* height: 279px;
+    padding: 15px; */
+    /* margin-bottom: 30px; */
+  }
+  
+  .portfolioCard__img {
+    width: 198px;
+    height: 279px;
+  }
+
+  .portfolioCard__about {
+    margin-top: 15px;
+  }
+
+  .portfolioCard__name {
+    font-size: 16px;
+  }
+
+  .portfolioCard__technologies {
+    font-size: 10px;
+  }
+
+  .presentSide__title {
+    font-size: 20px;
+  }
+
+  .presentMain__article {
+    font-size: 10px;
+  }
+  .presentMain__article:nth-child(1) {
+    top: 15px;
+    left: 20px;
+  }
+  .presentMain__article:nth-child(2) {
+    top: 15px;
+    right: 20px;
+    font-size: 16px;
+  }
+  .presentMain__article:nth-child(3) {
+    bottom: 15px;
+    left: 20px;
+  }
+  .presentMain__article:nth-child(4) {
+    bottom: 15px;
+    right: 20px;
+  }
+
+  .presentMain__title {
+    font-size: 28px;
+  }
+
+  .presentMain__titleUnderline {
+    height: 2px;
+  }
+
+  .presentation_gwent .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentation_prado .presentMain__titleUnderline {
+    width: 16px;
+  }
+
+  .presentation_spiele .presentMain__titleUnderline {
+    width: 18px;
+  }
+
+  .presentation_cuphead .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentation_calculator .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentation_player .presentMain__titleUnderline {
+    width: 30px;
+  }
+
+  .presentation_old .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentation_art .presentMain__titleUnderline {
+    width: 18px;
+  }
+
+  .presentation_trees .presentMain__titleUnderline {
+    width: 23px;
+  }
+
+  .presentMain__titleCircle {
+    top: -30px;
+    right: -40px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 87px);
+  }
+  .detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 206px);
+  }
+
+  .lineInfoWrap__left,
+.lineInfoWrap__right {
+    font-size: 10px;
+  }
+
+  .lineInfoWrap__left {
+    margin-right: 15px;
+  }
+
+  .lineInfoWrap__line {
+    margin-top: 5px;
+    margin-right: 15px;
+  }
+
+  .portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 98px);
+  }
+  .portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 189px);
+  }
+
+  .portfolioImg_md {
+    display: none;
+  }
+
+  .portfolioLinks__socialTitle {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  .portfolioLinks__socialItem {
+    margin-bottom: 30px;
+    width: 115px;
+    height: 30px;
+  }
+
+  .portfolioLinks__icon {
+    margin-right: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .portfolioLinks__name {
+    font-size: 18px;
+  }
+
+  .portfolioLinks {
+    height: 100%;
+    border-color: #dd4f5b;
+  }
+}
+/*____________________________________________________________
+## @media iPad (min-width: 767px) and (max-width: 1025px) (portrait)
+____________________________________________________________*/
+@media only screen and (min-width: 767px) and (max-width: 1025px) and (orientation: portrait) {
+  .presentation.presentation_open .presentSide {
+    width: 100%;
+    height: 110px;
+    transition-delay: 0.3s;
+  }
+  .presentation.presentation_open .closeButtonWrap {
+    transform: translateY(-50%) scale(1);
+  }
+  .presentation.presentation_open .presentMain {
+    width: 100%;
+    height: calc(100% - 110px);
+  }
+
+  .presentSide {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 110px;
+    border-right: 0;
+    border-bottom: 2px solid #292c2c;
+  }
+
+  .closeButtonWrap {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 30px;
+    transform: translateY(-50%);
+  }
+
+  .presentSide__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1, 1);
+    writing-mode: lr-tb;
+  }
+
+  .presentMain {
+    bottom: 0;
+  }
+
+  .presentMain__article {
+    font-size: 24px;
+  }
+
+  .presentMain__descriptTitle {
+    font-size: 24px;
+  }
+
+  .presentMain__img {
+    width: 90%;
+  }
+
+  .detailPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 196px);
+  }
+  .detailPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 482px);
+  }
+
+  .lineInfoWrap__left,
+.lineInfoWrap__right {
+    font-size: 24px;
+  }
+
+  .lineInfoWrap__left {
+    margin-right: 30px;
+  }
+
+  .lineInfoWrap__line {
+    margin-top: 12px;
+    margin-right: 30px;
+  }
+
+  .detailItem {
+    margin-bottom: 2vh;
+    margin-right: 0;
+    width: 100%;
+    height: 16vh;
+  }
+
+  .detailItem__img {
+    margin-right: 5%;
+    width: 35%;
+    border: 10px solid;
+  }
+
+  .detailItem__info {
+    width: 60%;
+  }
+
+  .detailItem__title,
+.detailItem__subtitle {
+    font-size: 24px;
+  }
+
+  .detailItem__paragraph {
+    font-size: 16px;
+    word-spacing: 10px;
+    line-height: 40px;
+  }
+
+  .portfolioPage .lineInfoWrap:nth-child(1) .lineInfoWrap__line {
+    width: calc(100% - 223px);
+  }
+  .portfolioPage .lineInfoWrap:nth-child(2) .lineInfoWrap__line {
+    width: calc(100% - 440px);
+  }
+
+  .portfolioInfoWrap {
+    height: 70%;
+  }
+
+  .portfolioImg,
+.portfolioLinks {
+    width: 100%;
+    border: 15px solid;
+  }
+
+  .portfolioImg_lg {
+    display: none;
+  }
+
+  .portfolioImg_md {
+    height: 40%;
+    border-color: #56c299;
+  }
+
+  .portfolioLinks {
+    margin-bottom: 2.5%;
+    height: 57.5%;
+    border-color: #dd4f5b;
+  }
+
+  .portfolioLinks__lineWrap {
+    margin-bottom: 8px;
+    height: 30px;
+  }
+
+  .portfolioLinks__line {
+    margin-top: 13.5px;
+    margin-right: 12px;
+    width: calc(100% - 42px);
+  }
+
+  .portfolioLinks__circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .portfolioLinks__socialTitle {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  .portfolioLinks__socialItem {
+    margin-bottom: 30px;
+    width: 115px;
+    height: 30px;
+  }
+
+  .portfolioLinks__icon {
+    margin-right: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .portfolioLinks__name {
+    font-size: 18px;
+  }
+
+  .portfolioLinks__underline {
+    bottom: 15px;
+  }
+
+  .portfolioContent {
+    display: none;
+  }
+}
+
+
+.page-d {
+  padding: 49px 0;
+  opacity: 1;
+  position: relative;
+}
+
+.portfoliodetail {
+  margin-right: 300px;
+  display: block;
+    margin-bottom: 49px;
+}
+
+.project-title {
+  margin-right: -300px;
+  width: 251px;
+  float: right;
+  margin-bottom: 34px;
+}
+
+.project-title h2 {
+  margin-top: 0;
+}
+
+.project-image {
+  position: relative;
+}
+
+.project-image img {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.image-meta{
+  margin: 0.5em 0 2em;
+  text-align: center;
+}
+
+.project-controls {
+  display: block;
+  clear: both;
+}
+
+#projectNav {
+  float: right;
+}
