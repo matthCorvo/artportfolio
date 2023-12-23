@@ -1,8 +1,11 @@
 backend:
   name: git-gateway
   branch: deploy
+
 media_folder: "public/assets/project_img"
 public_folder: "/assets/project_img"
+
+collections:
   - name: "projects"
     label: "Projects"
     folder: "src/projects"
