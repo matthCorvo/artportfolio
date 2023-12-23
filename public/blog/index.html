@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+</head>
+<body>
+   <!-- __________________ -->
+    <!--       HEADER       -->
+    <!-- ****************** -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <div id="logo">
+            <img src="/assets/logo.svg" alt="logo" class="logo-img">
+          </div>
+          <!-- navigation -->
+          <nav>
+            <ul role="list" class="nav-list flex-group">
+
+
+              <li><a href="/projects">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    
+<section class="container">
+  <h1 class="section-title txt-ctr">Recent Articles</h1>
+
+  <ul role="list" class="articles__list flow"><li>
+  <article class="snippet">
+    <img src="/assets/blog/phenix.jpg" alt="phenix the cat" class="snippet__image">
+    <h3 class="snippet__title">Fourth Article</h3>
+    <p class="snippet__meta">by <span>Sharona Young</span> on <span>26 nov. 2023</span></p>
+    <p class="snippet__body">Phenix the furry tyrant has destroyed more items in my room</p>
+    <a href="/blog/2023-11-25-fourth-article/" class="btn btn--primary">Continue Reading</a>
+  </article>
+</li><li>
+  <article class="snippet">
+    <img src="/assets/blog/article-3.jpg" alt="cute cat" class="snippet__image">
+    <h3 class="snippet__title">Third Article</h3>
+    <p class="snippet__meta">by <span>Sharona Young</span> on <span>30 sept. 2023</span></p>
+    <p class="snippet__body">Flop over chew ipad power cord  stand in front of the computer screen hunt anything that moves make muffins hide</p>
+    <a href="/blog/2023-09-30-third-article/" class="btn btn--primary">Continue Reading</a>
+  </article>
+</li><li>
+  <article class="snippet">
+    <img src="/assets/blog/article-2.jpg" alt="cute cat" class="snippet__image">
+    <h3 class="snippet__title">Second Article</h3>
+    <p class="snippet__meta">by <span>Sharona Young</span> on <span>25 sept. 2023</span></p>
+    <p class="snippet__body">Attack feet flop over flop over  stand in front of the computer screen  chew ipad power cord  give attitude hunt anything</p>
+    <a href="/blog/2023-09-25-second-article/" class="btn btn--primary">Continue Reading</a>
+  </article>
+</li><li>
+  <article class="snippet">
+    <img src="/assets/blog/article-1.jpg" alt="cute cat" class="snippet__image">
+    <h3 class="snippet__title">First Article</h3>
+    <p class="snippet__meta">by <span>Sharona Young</span> on <span>20 sept. 2023</span></p>
+    <p class="snippet__body">Attack feet behind the couch destroy couch flop over give attitude hide when guests come over hopped up on</p>
+    <a href="/blog/2023-09-20-first-article/" class="btn btn--primary">Continue Reading</a>
+  </article>
+</li>
+  </ul>
+</section>
+  </main>
+  <!-- __________________ -->
+    <!--       FOOTER       -->
+    <!-- ****************** -->
+    <footer class="site__footer flex-group">
+      <div id="logo">
+        <img src="/assets/logo-light.svg" alt="logo" class="logo-img">
+      </div>
+      <p>&copy 2023 Company Name | All rights reserved.</p>
+    </footer>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
